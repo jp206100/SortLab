@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortLab — Landing (Mockup)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#e0eaff',
+              500: '#4f6ef7',
+              600: '#3b55e6',
+              700: '#2d42c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Subtle grid background */
+    body { background-color: #fafafa; }
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-10 bg-white/80 backdrop-blur border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-gray-900">SortLab</span>
+      <a href="sign-in.html"
+         class="text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors">
+        Admin sign in →
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="grid-bg min-h-screen flex flex-col items-center justify-center px-6 pt-14">
+    <div class="max-w-2xl w-full text-center py-24">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-medium mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+        Building in public · Early access coming soon
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-5 leading-tight">
+        Card sorting,<br/>done asynchronously.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg text-gray-500 mb-10 max-w-xl mx-auto leading-relaxed">
+        SortLab runs phased card sorting workshops on everyone's schedule —
+        no live sessions, no scheduling battles. Ends with a stakeholder-ready content map.
+      </p>
+
+      <!-- CTA area -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          class="w-full sm:w-64 px-4 py-2.5 rounded-lg border border-gray-200 bg-white text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent placeholder-gray-400"
+        />
+        <button class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium shadow-sm transition-colors">
+          Notify me
+        </button>
+      </div>
+      <p class="text-xs text-gray-400 mt-3">No spam. I'll email when early access opens.</p>
+
+    </div>
+
+    <!-- Subtle feature row -->
+    <div class="max-w-3xl w-full grid grid-cols-1 sm:grid-cols-3 gap-4 pb-16">
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
+        <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center mb-3 text-brand-600 text-lg">⏱</div>
+        <h3 class="font-medium text-sm text-gray-900 mb-1">Async & phased</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Four gated phases run at your team's pace — no calendar Tetris.</p>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
+        <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center mb-3 text-brand-600 text-lg">🃏</div>
+        <h3 class="font-medium text-sm text-gray-900 mb-1">Participants create cards</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Cards and categories come from your team, not a pre-set list.</p>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
+        <div class="w-8 h-8 rounded-lg bg-brand-50 flex items-center justify-center mb-3 text-brand-600 text-lg">🗺</div>
+        <h3 class="font-medium text-sm text-gray-900 mb-1">Content map export</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Workshop ends with a validated map ready for stakeholders.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-6 text-center text-xs text-gray-400">
+    © 2026 SortLab · MIT licensed · <a href="#" class="underline underline-offset-2">GitHub</a>
+  </footer>
+
+  <!-- Mockup label -->
+  <div class="fixed bottom-4 right-4 bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-3 py-1.5 rounded-full font-medium shadow">
+    Mockup · Landing page
+  </div>
+
+</body>
+</html>
