@@ -42,7 +42,11 @@ export function SignUpForm() {
 
   async function handleGoogle() {
     setError(null);
-    await signIn("google", { redirectTo: "/dashboard" });
+    try {
+      await signIn("google", { redirectTo: "/dashboard" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Google sign-in failed. Please try again.");
+    }
   }
 
   return (
