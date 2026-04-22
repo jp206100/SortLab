@@ -1,18 +1,8 @@
-export const runtime = "nodejs";
+import { NextResponse } from "next/server";
 
-import {
-  convexAuthNextjsMiddleware,
-  createRouteMatcher,
-  nextjsMiddlewareRedirect,
-} from "@convex-dev/auth/nextjs/server";
-
-const isPublicRoute = createRouteMatcher(["/", "/sign-in", "/sign-up"]);
-
-export default convexAuthNextjsMiddleware(async (request, { convexAuth }) => {
-  if (!isPublicRoute(request) && !(await convexAuth.isAuthenticated())) {
-    return nextjsMiddlewareRedirect(request, "/sign-in");
-  }
-});
+export function middleware() {
+  return NextResponse.next();
+}
 
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.svg).*)"],
