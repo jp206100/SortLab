@@ -15,7 +15,14 @@ export default function DashboardPage() {
     }
   }, [isAuthenticated, isLoading, router]);
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-sm text-gray-400">Loading…</div>
+      </div>
+    );
+  }
+
   if (!isAuthenticated) return null;
   return <DashboardClient />;
 }
