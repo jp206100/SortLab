@@ -7,8 +7,7 @@ node_modules/
 .next/
 out/
 
-# Convex generated files
-convex/_generated/
+# Convex generated files are committed as stubs; `npx convex dev` regenerates them
 
 # environment variables
 .env
