@@ -79,7 +79,9 @@ export async function POST(request: Request) {
   }
 
   if (result.redirect !== undefined) {
-    const res = NextResponse.json({ redirect: result.redirect });
+    // Return verifier so the client can store it in localStorage for the code exchange.
+    // Without this the client stores undefined and Convex rejects the code exchange.
+    const res = NextResponse.json({ redirect: result.redirect, verifier: result.verifier });
     res.cookies.set(names.verifier, result.verifier ?? "", cookieOpts(secure));
     return res;
   }
