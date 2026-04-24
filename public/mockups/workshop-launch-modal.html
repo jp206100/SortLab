@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortLab — Launch confirmation (M2 mockup)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#e0eaff',
+              500: '#4f6ef7',
+              600: '#3b55e6',
+              700: '#2d42c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans text-gray-900 antialiased bg-gray-50 min-h-screen">
+
+  <!-- Faded background representing the setup screen behind the modal -->
+  <div class="min-h-screen flex flex-col pointer-events-none select-none blur-[1px] opacity-70">
+    <header class="bg-white border-b border-gray-100">
+      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+        <span class="font-semibold tracking-tight text-gray-900">SortLab</span>
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-gray-500">jane@example.com</span>
+          <span class="text-sm text-gray-500 px-3 py-1.5">Sign out</span>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-10 space-y-5">
+      <div class="h-6 w-48 bg-gray-200 rounded"></div>
+      <div class="bg-white border border-gray-100 rounded-2xl p-6 space-y-3">
+        <div class="h-4 w-32 bg-gray-200 rounded"></div>
+        <div class="h-9 bg-gray-100 rounded"></div>
+        <div class="h-20 bg-gray-100 rounded"></div>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-2xl p-6 space-y-3">
+        <div class="h-4 w-32 bg-gray-200 rounded"></div>
+        <div class="h-24 bg-gray-100 rounded"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Dimmed overlay -->
+  <div class="fixed inset-0 bg-gray-900/40 backdrop-blur-sm z-40"></div>
+
+  <!-- Modal -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center px-4">
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+
+      <!-- Header -->
+      <div class="px-6 pt-6 pb-4 border-b border-gray-100">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brand-600" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3.105 2.288a.75.75 0 00-.998.928l1.942 5.018a.75.75 0 00.596.474l6.345.63c.335.032.335.514 0 .546l-6.345.63a.75.75 0 00-.596.474l-1.942 5.018a.75.75 0 00.998.928l14-5.25a.75.75 0 000-1.4l-14-5.25z" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="text-base font-semibold text-gray-900">Launch workshop?</h2>
+            <p class="text-sm text-gray-500 mt-0.5">This sends invite emails immediately and starts Phase 1.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="px-6 py-5 space-y-4">
+
+        <!-- Summary card -->
+        <div class="bg-gray-50 border border-gray-100 rounded-lg divide-y divide-gray-100">
+          <div class="flex items-center justify-between px-4 py-2.5">
+            <span class="text-xs text-gray-500">Workshop</span>
+            <span class="text-sm font-medium text-gray-900 truncate max-w-[220px]">Spring 2026 navigation redesign</span>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2.5">
+            <span class="text-xs text-gray-500">Participants</span>
+            <span class="text-sm font-medium text-gray-900">3 invites</span>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2.5">
+            <span class="text-xs text-gray-500">Sender</span>
+            <span class="text-sm font-mono text-gray-700">onboarding@resend.dev</span>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2.5">
+            <span class="text-xs text-gray-500">Links expire</span>
+            <span class="text-sm font-medium text-gray-900">May 24, 2026 (30 days)</span>
+          </div>
+        </div>
+
+        <!-- Sender note -->
+        <div class="flex gap-2 items-start text-xs text-amber-800 bg-amber-50 border border-amber-100 rounded-md px-3 py-2.5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zm-1 2a1 1 0 00-1 1v3a1 1 0 001 1h.01a1 1 0 100-2H10V9a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          <span>
+            We’re using Resend’s shared sender while your custom domain is being verified. Some inboxes may route these to Promotions or Spam.
+          </span>
+        </div>
+
+        <p class="text-xs text-gray-500">
+          You can still add participants and edit future phase templates after launching.
+          The workshop name, description, and anonymity setting become locked.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-end gap-2">
+        <a href="workshop-setup.html" class="px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-sm font-medium text-gray-700">
+          Cancel
+        </a>
+        <a href="workshop-cockpit.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3.105 2.288a.75.75 0 00-.998.928l1.942 5.018a.75.75 0 00.596.474l6.345.63c.335.032.335.514 0 .546l-6.345.63a.75.75 0 00-.596.474l-1.942 5.018a.75.75 0 00.998.928l14-5.25a.75.75 0 000-1.4l-14-5.25z" />
+          </svg>
+          Launch &amp; send invites
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mockup label -->
+  <div class="fixed bottom-4 right-4 bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-3 py-1.5 rounded-full font-medium shadow z-[60]">
+    Mockup · Launch confirmation (M2)
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortLab — Dashboard (populated, M2 mockup)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#e0eaff',
+              500: '#4f6ef7',
+              600: '#3b55e6',
+              700: '#2d42c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans text-gray-900 antialiased bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Top nav -->
+  <header class="bg-white border-b border-gray-100 sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-gray-900">SortLab</span>
+      <div class="flex items-center gap-3">
+        <span class="text-sm text-gray-500">jane@example.com</span>
+        <button class="text-sm text-gray-500 hover:text-gray-700 transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100">
+          Sign out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-5xl mx-auto w-full px-6 py-10">
+
+    <!-- Page header -->
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="text-2xl font-semibold text-gray-900">Workshops</h1>
+        <p class="text-sm text-gray-500 mt-0.5">Manage your card sorting sessions</p>
+      </div>
+      <a href="workshop-setup.html"
+         class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium shadow-sm transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+        </svg>
+        New workshop
+      </a>
+    </div>
+
+    <!-- Controls row -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+        </svg>
+        <input type="text" placeholder="Search workshops"
+          class="pl-9 pr-3 py-2 w-64 rounded-lg border border-gray-200 bg-white text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent placeholder-gray-400" />
+      </div>
+      <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer select-none">
+        <input type="checkbox" class="rounded border-gray-300 text-brand-600 focus:ring-brand-500" />
+        Show deleted
+      </label>
+    </div>
+
+    <!-- Workshop list -->
+    <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+
+      <!-- Row: Phase 1 Active -->
+      <a href="workshop-cockpit.html" class="block hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-6 px-6 py-4 border-b border-gray-100">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2.5">
+              <span class="font-medium text-gray-900 truncate">Spring 2026 navigation redesign</span>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                Phase 1 active
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 truncate">
+              12 participants · launched Apr 18
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xs text-gray-400">Phase 1 closes</div>
+            <div class="text-sm text-gray-700 font-medium">Apr 30</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </a>
+
+      <!-- Row: Phase 1 Active -->
+      <a href="workshop-cockpit.html" class="block hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-6 px-6 py-4 border-b border-gray-100">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2.5">
+              <span class="font-medium text-gray-900 truncate">Help center IA refresh</span>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                Phase 1 active
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 truncate">
+              7 participants · launched Apr 22
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xs text-gray-400">Phase 1 closes</div>
+            <div class="text-sm text-gray-700 font-medium">No deadline</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </a>
+
+      <!-- Row: Draft -->
+      <a href="workshop-setup.html" class="block hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-6 px-6 py-4 border-b border-gray-100">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2.5">
+              <span class="font-medium text-gray-900 truncate">Mobile onboarding flow</span>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-gray-100 border border-gray-200 text-gray-600 text-xs font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                Draft
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 truncate">
+              3 participants · created Apr 23
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xs text-gray-400">Not launched</div>
+            <div class="text-sm text-gray-700 font-medium">—</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </a>
+
+      <!-- Row: Deleted (shown only when toggle is ON) -->
+      <a href="workshop-ended.html" class="block hover:bg-gray-50 transition-colors opacity-60">
+        <div class="flex items-center gap-6 px-6 py-4">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2.5">
+              <span class="font-medium text-gray-600 line-through truncate">Pricing page copy test</span>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-50 border border-red-100 text-red-700 text-xs font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                Deleted
+              </span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1 truncate">
+              5 participants · deleted Apr 20
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xs text-gray-400">&nbsp;</div>
+            <div class="text-sm text-gray-400">—</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="text-xs text-gray-400 mt-3 italic">
+      Note: the last (greyed, line-through) row only appears when “Show deleted” is on. Default is off.
+    </p>
+
+  </main>
+
+  <!-- Mockup label -->
+  <div class="fixed bottom-4 right-4 bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-3 py-1.5 rounded-full font-medium shadow">
+    Mockup · Dashboard (populated, M2)
+  </div>
+
+</body>
+</html>
