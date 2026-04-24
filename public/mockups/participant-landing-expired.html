@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortLab — Link expired (participant landing, M2 mockup)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#e0eaff',
+              500: '#4f6ef7',
+              600: '#3b55e6',
+              700: '#2d42c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans text-gray-900 antialiased bg-gray-50 min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-2xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-gray-900">SortLab</span>
+      <span class="text-xs text-gray-400">Workshop participant</span>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-2xl mx-auto w-full px-6 py-16 flex flex-col items-center justify-center">
+
+    <div class="w-full bg-white border border-gray-100 rounded-2xl shadow-sm p-10 text-center">
+
+      <!-- Icon -->
+      <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-5 text-amber-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .22.096.428.264.572l3.5 3a.75.75 0 00.972-1.144L10.75 9.658V5z" clip-rule="evenodd" />
+        </svg>
+      </div>
+
+      <h1 class="text-xl font-semibold text-gray-900 mb-2">This link has expired</h1>
+      <p class="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed mb-6">
+        Invite links are valid for 30 days. Please ask your workshop administrator to send you a new invite.
+      </p>
+
+      <!-- Divider -->
+      <div class="border-t border-gray-100 pt-5 mt-5 text-left">
+        <div class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Need help?</div>
+        <ul class="text-sm text-gray-600 space-y-1.5 list-disc list-inside">
+          <li>Reply to the original invite email to request a new link.</li>
+          <li>Check with your team lead — they may have a fresh invite waiting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-6 text-center">
+      Link reference: <span class="font-mono">4xR2…9kZq</span>
+    </p>
+
+  </main>
+
+  <!-- Mockup label -->
+  <div class="fixed bottom-4 right-4 bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-3 py-1.5 rounded-full font-medium shadow">
+    Mockup · Participant landing (expired)
+  </div>
+
+</body>
+</html>
