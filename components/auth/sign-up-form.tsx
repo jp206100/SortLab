@@ -33,8 +33,8 @@ export function SignUpForm() {
         flow: "signUp",
       });
       router.push("/dashboard");
-    } catch {
-      setError("Could not create account. Try a different email.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not create account. Try a different email.");
     } finally {
       setLoading(false);
     }
