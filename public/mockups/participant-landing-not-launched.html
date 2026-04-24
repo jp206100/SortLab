@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortLab — Workshop not yet started (participant landing, M2 mockup)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0f4ff',
+              100: '#e0eaff',
+              500: '#4f6ef7',
+              600: '#3b55e6',
+              700: '#2d42c4',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-sans text-gray-900 antialiased bg-gray-50 min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-2xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-gray-900">SortLab</span>
+      <span class="text-xs text-gray-400">Workshop participant</span>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-2xl mx-auto w-full px-6 py-16 flex flex-col items-center justify-center">
+
+    <div class="w-full bg-white border border-gray-100 rounded-2xl shadow-sm p-10 text-center">
+
+      <!-- Icon -->
+      <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mx-auto mb-5 text-brand-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clip-rule="evenodd" />
+        </svg>
+      </div>
+
+      <h1 class="text-xl font-semibold text-gray-900 mb-2">Your workshop hasn’t started yet</h1>
+      <p class="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed mb-6">
+        The workshop administrator is still setting things up. You’ll get another email as soon as it’s ready for you to contribute.
+      </p>
+
+      <div class="border-t border-gray-100 pt-5 text-left">
+        <div class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">What to expect</div>
+        <ul class="text-sm text-gray-600 space-y-1.5">
+          <li class="flex gap-2">
+            <span class="text-brand-500">1.</span>
+            <span>You’ll get an email when Phase 1 opens.</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand-500">2.</span>
+            <span>Use the link in that email to start contributing cards.</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand-500">3.</span>
+            <span>The workshop runs through four async phases over the next few weeks.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-6 text-center">
+      You can bookmark this page — it’ll update automatically once the workshop opens.
+    </p>
+
+  </main>
+
+  <!-- Mockup label -->
+  <div class="fixed bottom-4 right-4 bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs px-3 py-1.5 rounded-full font-medium shadow">
+    Mockup · Participant landing (not yet launched)
+  </div>
+
+</body>
+</html>
